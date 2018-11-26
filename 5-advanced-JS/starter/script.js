@@ -116,27 +116,41 @@
 // console.log(rates);
 
 //Functions returning another function
-function interviewQuestion(job){
-    if (job === 'designer') {
-        return function(name) {
-            console.log(name, ', Can you please explain what UX design is?')
-        }
-    } else if(job === 'teacher') {
-        return function(name){
-            console.log('what subject do you teach', name);
-        }
-    } else {
-        return function(name) {
-            console.log('Hello', name, 'what do you do?');
-        }
-    }
-}
+// function interviewQuestion(job){
+//     if (job === 'designer') {
+//         return function(name) {
+//             console.log(name, ', Can you please explain what UX design is?')
+//         }
+//     } else if(job === 'teacher') {
+//         return function(name){
+//             console.log('what subject do you teach', name);
+//         }
+//     } else {
+//         return function(name) {
+//             console.log('Hello', name, 'what do you do?');
+//         }
+//     }
+// }
 
-var teacherQuestion = interviewQuestion('teacher');
-var designerQuestion = interviewQuestion('designer');
+// var teacherQuestion = interviewQuestion('teacher');
+// var designerQuestion = interviewQuestion('designer');
 
-teacherQuestion('John');
-designerQuestion('Jane');
+// teacherQuestion('John');
+// designerQuestion('Jane');
 
-interviewQuestion('teacher')('Mark');
+// interviewQuestion('teacher')('Mark');
 
+//IIFE
+//Immediatlt Invoked Function
+
+// function game() {
+//     var score = Math.random() * 10;
+//     console.log(score >= 5);
+
+// }
+// game();
+
+(function(goodluck){
+    var score = Math.random() * 10;
+    console.log(score >= 5 - goodluck);
+})(5);
